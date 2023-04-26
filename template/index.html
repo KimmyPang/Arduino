@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smart Water Monitoring System</title>
+    </head>
+
+    <body>
+        <h2>Pressure Control</h2>
+
+        <form action="/" method="post">
+            <button type="submit" name="MAX" value="MAX">Max</button>
+            <button type="submit" name="MIN" value="MIN">Min</button>
+            <button type="submit" name="OFF" value="OFF">Off</button>
+        </form>
+
+        <table>
+            {% for row in data%}
+            <tr>
+                {% for col in row %}
+                <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
